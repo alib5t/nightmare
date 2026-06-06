@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'widgets/digital_clock.dart';
 
 void main() {
   runApp(MyLauncher());
