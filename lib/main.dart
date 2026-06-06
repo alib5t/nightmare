@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
-import 'widgets/digital_clock.dart';
 
 void main() {
-  runApp(MyLauncher());
+  runApp(const MyLauncher());
 }
 
 class MyLauncher extends StatelessWidget {
+  const MyLauncher({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: LauncherHome(),
     );
@@ -16,6 +17,8 @@ class MyLauncher extends StatelessWidget {
 }
 
 class LauncherHome extends StatelessWidget {
+  const LauncherHome({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,15 +30,6 @@ class LauncherHome extends StatelessWidget {
             child: Image.asset(
               "assets/wallpaper.jpg",
               fit: BoxFit.cover,
-            ),
-          ),
-
-          // 🕒 Saat
-          Align(
-            alignment: Alignment.topCenter,
-            child: Padding(
-              padding: EdgeInsets.only(top: 80),
-              child: DigitalClock(),
             ),
           ),
 
