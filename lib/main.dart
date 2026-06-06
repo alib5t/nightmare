@@ -1,5 +1,5 @@
-import 'dart:async';
 import 'package:flutter/material.dart';
+import 'dart:async';
 import 'widgets/digital_clock.dart';
 
 void main() {
@@ -23,7 +23,7 @@ class HomeScreen extends StatelessWidget {
       body: Stack(
         children: [
 
-          // 🖼 Arka plan
+          // 🖼 wallpaper
           Positioned.fill(
             child: Image.asset(
               "assets/wallpaper.jpg",
@@ -31,7 +31,7 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
 
-          // 🕒 Dijital saat (üstte)
+          // 🕒 clock
           Align(
             alignment: Alignment.topCenter,
             child: Padding(
