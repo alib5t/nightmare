@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'dart:async';
 import 'widgets/digital_clock.dart';
 
 void main() {
@@ -11,19 +10,19 @@ class MyLauncher extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      home: LauncherHome(),
     );
   }
 }
 
-class HomeScreen extends StatelessWidget {
+class LauncherHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
         children: [
 
-          // 🖼 wallpaper
+          // 🖼 Arka plan
           Positioned.fill(
             child: Image.asset(
               "assets/wallpaper.jpg",
@@ -31,7 +30,7 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
 
-          // 🕒 clock
+          // 🕒 Saat
           Align(
             alignment: Alignment.topCenter,
             child: Padding(
