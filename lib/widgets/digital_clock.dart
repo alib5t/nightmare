@@ -42,13 +42,13 @@ class _DigitalClockState extends State<DigitalClock> {
         Text(
           time,
           style: const TextStyle(
-            fontSize: 52,
+            fontSize: 54,
             color: Colors.white,
             fontWeight: FontWeight.bold,
             letterSpacing: 2,
             shadows: [
               Shadow(
-                blurRadius: 15,
+                blurRadius: 20,
                 color: Colors.black,
                 offset: Offset(0, 0),
               )
@@ -65,6 +65,7 @@ class _DigitalClockState extends State<DigitalClock> {
             color: Colors.white70,
           ),
         ),
+
       ],
     );
   }
