@@ -1,6 +1,11 @@
+import 'dart:async';
+import 'package:flutter/material.dart';
+
 class DigitalClock extends StatefulWidget {
+  const DigitalClock({super.key});
+
   @override
-  _DigitalClockState createState() => _DigitalClockState();
+  State<DigitalClock> createState() => _DigitalClockState();
 }
 
 class _DigitalClockState extends State<DigitalClock> {
@@ -10,7 +15,8 @@ class _DigitalClockState extends State<DigitalClock> {
   @override
   void initState() {
     super.initState();
-    Timer.periodic(Duration(seconds: 1), (timer) {
+
+    Timer.periodic(const Duration(seconds: 1), (timer) {
       final now = DateTime.now();
 
       setState(() {
@@ -33,10 +39,9 @@ class _DigitalClockState extends State<DigitalClock> {
       mainAxisSize: MainAxisSize.min,
       children: [
 
-        // 🕒 saat
         Text(
           time,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 52,
             color: Colors.white,
             fontWeight: FontWeight.bold,
@@ -51,12 +56,11 @@ class _DigitalClockState extends State<DigitalClock> {
           ),
         ),
 
-        SizedBox(height: 6),
+        const SizedBox(height: 6),
 
-        // 📅 tarih
         Text(
           date,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 18,
             color: Colors.white70,
           ),
